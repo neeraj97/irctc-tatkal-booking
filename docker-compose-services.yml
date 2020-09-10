@@ -1,0 +1,16 @@
+version: '3.0'
+services:
+    ticketbookingapi:
+        build: 
+            context: ./TicketBookingApi
+            dockerfile: Dockerfile
+        ports: 
+            - "4444:4444"
+        network_mode: host
+    ticketbookingstreamprocessor:
+        build: 
+            context: ./TicketBookingStreamProcessing
+            dockerfile: Dockerfile
+        network_mode: host
+        depends_on: 
+            - ticketbookingapi
