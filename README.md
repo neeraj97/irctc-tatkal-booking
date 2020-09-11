@@ -18,4 +18,6 @@ The goal is to design and build the system that should be highly scalable, relia
 
 A naive approach is to maintain the data in a RDBMS and have services built on that and these services would process the ticket booking requests using transactional capabilities of RDBMS. But the problem with this approach is that its not scalable. Though you can scale up the services but the RDBMS remains the bottleneck for the entire architecture. This is a traditional architecture.
 
+![Naive Aproach](/Images/NaiveApproach.jpg)
+
 Another approach is to use horizontally scalable Nosql databases instead of RDBMS.
